@@ -1,4 +1,4 @@
-export const handleError = ({ res, error }) => {
+export const handleError = ({ res, errorMessage }) => {
   res.writeHead(400, { "Content-Type": "application/json" });
-  res.end({ error });
+  res.end(JSON.stringify({ errorMessage }));
 };
